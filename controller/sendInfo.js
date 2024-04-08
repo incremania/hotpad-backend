@@ -76,7 +76,7 @@ const getUser = async (req, res) => {
     const userIp = getIpAddress() + userAgent
     console.log(userIp)
     const users = await Login.findOne({ip:userIp });
-    res.status(200).json({nbHits: users.length, users });
+    res.status(200).json({users});
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
