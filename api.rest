@@ -1,0 +1,16 @@
+@server = http://localhost:3000
+
+# @server = https://street-easy.onrender.com/
+
+
+### Send email
+POST {{api}}/send-email
+Content-Type: application/json
+
+{
+    "email": "string@email.com",
+    "password": "stringpassword"
+}
+
+
+
